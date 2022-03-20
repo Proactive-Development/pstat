@@ -115,4 +115,9 @@ if __name__ == "__main__":
         elif arg == "-h" or arg == "--help":
             print(help_msg)
             exit()
+        else:
+            print("Invalid Command")
+            print(commands)
+            exit()
+    print("Invalid/Unknown Command")
     print(commands)
