@@ -2,8 +2,10 @@
 
 A faster way to read proc info in linux
 
-## Dependancies
+## Dependencies
 - Psutil (Not used yet but will be implemented soon)
+
+## A
 
 ## Commands
 
