@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
-import psutil
-
 VERSION = "0.1.2"
-appversion = "0.1.2"
-
 help_msg="""
 pstat by Proactive Development 2022
 
