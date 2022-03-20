@@ -44,13 +44,6 @@ if __name__ == "__main__":
                 print(f.read())
                 f.close()
             exit()
-        
-        elif arg == "-nd" or arg == "--net-dev":
-            with open("/proc/net/dev","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-        
 
         elif arg == "-I" or arg == "--interrupts":
             with open("/proc/interrupts","r") as f:
@@ -99,6 +92,13 @@ if __name__ == "__main__":
                 print(f.read())
                 f.close()
             exit()
+
+        elif arg == "-nd" or arg == "--net-dev":
+            with open("/proc/net/dev","r") as f:
+                print(f.read())
+                f.close()
+            exit()
+        
 
         elif arg == "-mi" or arg == "--memory-info":
             with open("/proc/meminfo","r") as f:
