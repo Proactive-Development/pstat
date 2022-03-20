@@ -5,7 +5,10 @@ A faster way to read proc info in linux
 ## Dependencies
 - Psutil (Not used yet but will be implemented soon)
 
-## A
+## Auto Installation
+
+`curl -fsSL https://raw.githubusercontent.com/Proactive-Development/pstat/main/scripts/autoinstall.sh | bash -`
+
 
 ## Commands
 
