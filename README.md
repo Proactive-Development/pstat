@@ -7,7 +7,7 @@ A faster way to read proc info in linux
 
 ## Auto Installation
 
-`curl -fsSL https://raw.githubusercontent.com/Proactive-Development/pstat/main/scripts/autoinstall.sh | bash -`
+```curl -fsSL https://raw.githubusercontent.com/Proactive-Development/pstat/main/scripts/autoinstall.sh | bash -```
 
 
 ## Commands
