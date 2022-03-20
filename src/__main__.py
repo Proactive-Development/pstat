@@ -56,6 +56,16 @@ if __name__ == "__main__":
                 print(f.read())
                 f.close()
         
+        elif arg == "-w" or arg == "--wifi":
+            with open("/proc/net/wireless","r") as f:
+                print(f.read())
+                f.close()
+
+        elif arg == "-mi" or arg == "--memory":
+            with open("/proc/meminfo","r") as f:
+                print(f.read())
+                f.close()
+        
         elif arg == "-lp" or arg == "--ls-pids":
             for i in os.listdir("/proc"):
                 if i.replace("_","").replace("-","").isalpha() == False:
