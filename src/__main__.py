@@ -34,7 +34,6 @@ if __name__ == "__main__":
     for arg in sys.argv:
         if arg == "-V" or arg == "--app-version":
             print(VERSION)
-            print(appversion)
             exit()
         elif arg == "-i" or arg == "--cpuinfo":
             with open("/proc/cpuinfo","r") as f:
