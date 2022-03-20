@@ -4,6 +4,7 @@ import sys
 import psutil
 
 VERSION = "0.1.2"
+appversion = "0.1.2"
 
 help_msg="""
 pstat by Proactive Development 2022
@@ -33,6 +34,7 @@ if __name__ == "__main__":
     for arg in sys.argv:
         if arg == "-V" or arg == "--app-version":
             print(VERSION)
+            print(appversion)
             exit()
         elif arg == "-i" or arg == "--cpuinfo":
             with open("/proc/cpuinfo","r") as f:
@@ -115,9 +117,6 @@ if __name__ == "__main__":
         elif arg == "-h" or arg == "--help":
             print(help_msg)
             exit()
-        else:
-            print("Invalid Command")
-            print(commands)
-            exit()
+
     print("Invalid/Unknown Command")
     print(commands)
