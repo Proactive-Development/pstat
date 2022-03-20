@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 help_msg="""
 pstat by Proactive Development 2022
 
@@ -18,13 +18,14 @@ Standard Commands:
     -lp --ls-pids      Lists all the pids in /proc
     -w  --wireless     Displays the /proc/wireless file and shows the wireless interface data
     -mi --memory-info  Displays the /proc/meminfo file and shows the information about memory usage, both physical and swap.
+    -nd --net-dev      Displays the /proc/net/dev file and shows the network devices and their statistics.
 Sudo Required Commands:
 
     --pid-cmdline --pid-cl Gets the command line of the pid that you specifiy e.g pstat --pid-cl 100
     --pid-io Gets the io statisicts of the pid that you specifiy e.g pstat --pid-io 100
 """
 
-commands="[-V -i -I -f -m -M -p -u -v -lp -w -mi --pid-cl--pid-io]"
+commands="[-V -i -I -f -m -M -p -u -v -lp -w -mi -nd --pid-cl--pid-io]"
 
 if __name__ == "__main__":
     for arg in sys.argv:
@@ -43,6 +44,13 @@ if __name__ == "__main__":
                 print(f.read())
                 f.close()
             exit()
+        
+        elif arg == "-nd" or arg == "--net-dev":
+            with open("/proc/net/dev","r") as f:
+                print(f.read())
+                f.close()
+            exit()
+        
 
         elif arg == "-I" or arg == "--interrupts":
             with open("/proc/interrupts","r") as f:
