@@ -22,7 +22,7 @@ A faster way to read proc info in linux
     -M  --mounts       Displays the /proc/mounts file and shows what mounted filesystems are attached to the kernel
     -p  --partitions   Displays the /proc/partitions file and shows a table of partitions known to the system
     -u  --uptime       Displays the /proc/uptime file and shows the uptime of the system
-    -v  --version      Displays the /proc/version file and shows the kernal version
+    -v  --version      Displays the /proc/version file and shows the kernel version
     -lp --ls-pids      Lists all the pids in /proc
     -w  --wireless     Displays the /proc/wireless file and shows the wireless interface data
     -mi --memory-info  Displays the /proc/meminfo file and shows the information about memory usage, both physical and swap.    
