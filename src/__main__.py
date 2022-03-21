@@ -10,6 +10,7 @@ Standard Commands:
     -i  --cpuinfo      Displays the /proc/cpuinfo file and returns information about the processor, such as its type, make, model, and performance.
     -I  --interrupts   Displays the /proc/interrupts file and shows which interrupts are in use, and how many of each there have been.
     -f  --filesystems  Displays the /proc/filesystems file and shows filesystems configured/supported into/by the kernel.
+    -F --filsystem     Displays the /proc/fs file and shows filesystem paramters, they are currently nfs/exports.
     -m  --iomem        Displays the /proc/iomem file and shows a memory map
     -M  --mounts       Displays the /proc/mounts file and shows what mounted filesystems are attached to the kernel
     -p  --partitions   Displays the /proc/partitions file and shows a table of partitions known to the system
@@ -25,7 +26,7 @@ Sudo Required Commands:
     --pid-io Gets the io statisicts of the pid that you specifiy e.g pstat --pid-io 100
 """
 
-commands="[-V -i -I -f -m -M -p -u -v -lp -w -mi -nd --pid-cl--pid-io]"
+commands="[-V -i -I -f -m -M -p -u -v -lp -w -mi -nd -F  --pid-cl--pid-io]"
 
 if __name__ == "__main__":
     for arg in sys.argv:
@@ -53,6 +54,12 @@ if __name__ == "__main__":
 
         elif arg == "-f" or arg == "--filesystems":
             with open("/proc/filesystems","r") as f:
+                print(f.read())
+                f.close()
+            exit()
+
+        elif arg == "-F" or arg == "--filesystems":
+            with open("/proc/fs","r") as f:
                 print(f.read())
                 f.close()
             exit()
