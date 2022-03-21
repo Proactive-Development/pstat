@@ -26,7 +26,7 @@ Sudo Required Commands:
     --pid-io Gets the io statisicts of the pid that you specifiy e.g pstat --pid-io 100
 """
 
-commands="[-V -i -I -f -m -M -p -u -v -lp -w -mi -nd -F  --pid-cl--pid-io]"
+commands="[-V -i -I -f -fm -m -M -p -u -v -lp -w -mi -nd --pid-cl --pid-io]"
 
 if __name__ == "__main__":
     for arg in sys.argv:
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
         elif arg == "-fm" or arg == "--file-max":
             with open("/proc/sys/fs/file-max","r") as f:
-                print(f.read())
+                print(f.read(), "bytes")
                 f.close()
             exit()
 
