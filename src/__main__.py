@@ -58,7 +58,7 @@ if __name__ == "__main__":
                 f.close()
             exit()
 
-        elif arg == "-F" or arg == "--filesystems":
+        elif arg == "-F" or arg == "--filesystem":
             with open("/proc/fs","r") as f:
                 print(f.read())
                 f.close()
