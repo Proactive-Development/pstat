@@ -18,7 +18,7 @@ jobs:
       run: cd src/ && make build
     
     - name: Install dependencies
-      run: make install
+      run: cd src/ make install
       
     - name: Run check
       run: make check
