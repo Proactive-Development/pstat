@@ -27,4 +27,4 @@ test:
 	./pstat -w 
 	./pstat -mi
 	./pstat -nd
-	./pstat -mf
+	./pstat -fm
