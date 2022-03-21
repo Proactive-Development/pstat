@@ -17,8 +17,8 @@ jobs:
     - name: build
       run: cd src/ && make build
       
-   # - name: test
-   #   run: make test
+    - name: test
+      run: cd src/ && make test
     
     - name: Automatic Releases
       uses: marvinpinto/action-automatic-releases@v1.2.1
