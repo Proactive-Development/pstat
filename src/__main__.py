@@ -35,65 +35,86 @@ if __name__ == "__main__":
             exit()
 
         elif arg == "-i" or arg == "--cpuinfo":
-            with open("/proc/cpuinfo","r") as f:
-                print(f.read())
-                f.close()
-            exit()
+            try:
+                with open("/proc/cpuinfo","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/cpuinfo is missing from your system")
 
         elif arg == "-s" or arg == "--stat":
-            with open("/proc/stat","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/stat","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/stat is missing from your system")
         elif arg == "-I" or arg == "--interrupts":
-            with open("/proc/interrupts","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/interrupts is missing from your system")
         elif arg == "-f" or arg == "--filesystems":
-            with open("/proc/filesystems","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/filesystems","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/filesystems is missing from your system")
         elif arg == "-fm" or arg == "--file-max":
-            with open("/proc/sys/fs/file-max","r") as f:
-                print(f.read(), "bytes")
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/sys/fs/file-max","r") as f:
+                    print(f.read(), "bytes")
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/sys/fs/file-max is missing from your system")
         elif arg == "-m" or arg == "--iomem":
-            with open("/proc/iomem","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/iomem","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/iomem is missing from your system")
         elif arg == "-M" or arg == "--mounts":
-            with open("/proc/mounts","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/mounts","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/iomem is missing from your system")
         elif arg == "-p" or arg == "--partitions":
-            with open("/proc/partitions","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/partitions","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/partitions is missing from your system")
         elif arg == "-u" or arg == "--uptime":
-            with open("/proc/uptime","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/uptime","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/uptime is missing from your system")
         elif arg == "-v" or arg == "--version":
-            with open("/proc/version","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-
+            try:
+                with open("/proc/version","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/version is missing from your system")
         elif arg == "-w" or arg == "--wireless":
             with open("/proc/net/wireless","r") as f:
                 print(f.read())
@@ -101,17 +122,22 @@ if __name__ == "__main__":
             exit()
 
         elif arg == "-nd" or arg == "--net-dev":
-            with open("/proc/net/dev","r") as f:
-                print(f.read())
-                f.close()
-            exit()
-        
+            try:
+                with open("/proc/net/dev","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/net/dev is missing from your system")        
 
         elif arg == "-mi" or arg == "--memory-info":
-            with open("/proc/meminfo","r") as f:
-                print(f.read())
-                f.close()
-            exit()
+            try:
+                with open("/proc/meminfo","r") as f:
+                    print(f.read())
+                    f.close()
+                exit()
+            except FileNotFoundError:
+                print("[Error 2] The file /proc/meminfo is missing from your system")     
 
         elif arg == "-lp" or arg == "--ls-pids":
             for i in os.listdir("/proc"):
