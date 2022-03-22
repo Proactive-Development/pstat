@@ -17,7 +17,7 @@ WHITE='\033[1;37m'
 
 echo "Welcome to the pstat auto install script"
 read -p "Do you want to install pstat and the requierd dependancies [Y/N]> " -n 1 -r
-echo  "" # (optional) move to a new line
+echo  ""  # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "========================================"
