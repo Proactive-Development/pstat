@@ -53,7 +53,7 @@ if __name__ == "__main__":
                 print("[Error 2] The file /proc/stat is missing from your system")
         elif arg == "-I" or arg == "--interrupts":
             try:
-                with open("/proc/","r") as f:
+                with open("/proc/interrupts","r") as f:
                     print(f.read())
                     f.close()
                 exit()
