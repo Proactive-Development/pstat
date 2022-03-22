@@ -28,6 +28,6 @@ then
 
     sudo curl -fsSL https://github.com/Proactive-Development/pstat/releases/download/latest/pstat -o /usr/bin/pstat && sudo chmod +x /usr/bin/pstat
     echo "========================================"
-    echo -e "${GREEN}Pstat is now installed on your system ${NOCOLOR}"
-    echo -e "${NOCOLOR}If you need any${BLUE} help ${NOCOLOR}"
+    echo -e "${GREEN}Pstat is now installed on your system ${NOCOLOR}."
+    echo -e "${NOCOLOR}If you need any${BLUE} help ${NOCOLOR} open an issue on github or join the discord at https://discord.gg/8PNeYyHgNr"
 fi
