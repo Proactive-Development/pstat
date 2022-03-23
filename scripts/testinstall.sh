@@ -1,13 +1,8 @@
-#!/bin/bash
-
-read -p "Do you want to proceed? (yes/no) " yn
-
-case $yn in 
-	yes ) echo ok, we will proceed;;
-	no ) echo exiting...;
-		exit;;
-	* ) echo invalid response;
-		exit 1;;
-esac
-
-echo doing stuff...
+while true; do
+    read -p "Do you wish to install this program?" yn
+    case $yn in
+        [Yy]* ) make install; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
