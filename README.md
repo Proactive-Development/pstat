@@ -1,4 +1,5 @@
 # Pstat
+<img src="https://raw.githubusercontent.com/Proactive-Development/Logos/main/Pstat/pstat%20logo.png" width=100>
 
 A faster way to read proc info in linux
 
