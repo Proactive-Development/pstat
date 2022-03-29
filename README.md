@@ -34,3 +34,6 @@ A faster way to read proc info in linux
     --pid-cmdline --pid-cl Gets the command line of the pid that you specifiy e.g pstat --pid-cl 100
     --pid-io Gets the io statisicts of the pid that you specifiy e.g pstat --pid-io 100
 ```
+
+## Feature requests
+If you have any feature requests, please open an issue on the [Github page](https://github.com/Proactive-Development/pstat/issues)
