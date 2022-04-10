@@ -1,0 +1,21 @@
+{
+    "name": "pstat",
+    "description": "A faster way to read proc info in linux",
+    "version": "0.1.0",
+    "main_file": "./src/__main__.py",
+    "author": "Proactive Development",
+    "license": "none",
+    "url": "none",
+    "email": "none",
+    "languages": [
+        "shell",
+        "python"
+    ],
+    "actions": {
+        "run": "cd src && make test",
+        "build": "cd src && make build",
+        "test": "cd src && make test",
+        "install": "cd src && make install",
+        "clean": "cd src && make clean"
+    }
+}
