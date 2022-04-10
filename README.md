@@ -8,7 +8,11 @@ A faster way to read proc info in linux
 
 ## Auto Installation
 
-```curl -fsSL https://raw.githubusercontent.com/Proactive-Development/pstat/main/scripts/autoinstall.sh | bash -```
+### Stable Install
+```curl -fsSL https://files.proactive-dev.xyz/Git%20Projects/pstat/scripts/stableinstall.sh | bash -```
+
+### Beta/Unstable Install
+```curl -fsSL https://files.proactive-dev.xyz/Git%20Projects/pstat/scripts/betainstall.sh | bash -```
 
 
 ## Commands
